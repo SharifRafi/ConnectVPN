@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OfferPopup" customModule="WaltonWhilCloud" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="2dY-8j-iw8"/>
+                <outlet property="crossButton" destination="Mzr-EA-HSw" id="t3P-wT-9CB"/>
+                <outlet property="offerCollectionView" destination="M1d-5g-D54" id="skc-2X-fTn"/>
+                <outlet property="pageControl" destination="DY9-7e-Btf" id="kFM-Sh-g4M"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="502" height="804"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M4t-SE-290">
+                    <rect key="frame" x="0.0" y="48" width="502" height="722"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-ck-bmR">
+                            <rect key="frame" x="37.5" y="147.5" width="427" height="427"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="M1d-5g-D54">
+                                    <rect key="frame" x="0.0" y="0.0" width="427" height="427"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="d1y-yR-1QX">
+                                        <size key="itemSize" width="183" height="159"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                    <cells/>
+                                </collectionView>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzr-EA-HSw">
+                                    <rect key="frame" x="404" y="8" width="15" height="15"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="6qc-5y-lHW"/>
+                                        <constraint firstAttribute="width" constant="15" id="SGL-Fi-G9G"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title=" " image="ic_cross"/>
+                                    <connections>
+                                        <action selector="crossPressed:" destination="-1" eventType="touchUpInside" id="3H1-cF-2Le"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="wcCellBackground"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Mzr-EA-HSw" secondAttribute="trailing" constant="8" id="2Ub-Pl-Zls"/>
+                                <constraint firstAttribute="width" secondItem="fnU-ck-bmR" secondAttribute="height" multiplier="1:1" id="CtF-uH-xyP"/>
+                                <constraint firstAttribute="trailing" secondItem="M1d-5g-D54" secondAttribute="trailing" id="GpO-kS-OA8"/>
+                                <constraint firstItem="M1d-5g-D54" firstAttribute="top" secondItem="fnU-ck-bmR" secondAttribute="top" id="XNy-Xz-eW7"/>
+                                <constraint firstItem="Mzr-EA-HSw" firstAttribute="top" secondItem="fnU-ck-bmR" secondAttribute="top" constant="8" id="aIq-e0-kdR"/>
+                                <constraint firstAttribute="bottom" secondItem="M1d-5g-D54" secondAttribute="bottom" id="n8f-ZS-r4V"/>
+                                <constraint firstItem="M1d-5g-D54" firstAttribute="leading" secondItem="fnU-ck-bmR" secondAttribute="leading" id="t23-MP-Lua"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="_cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="DY9-7e-Btf">
+                            <rect key="frame" x="193" y="546.5" width="116.5" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="x2t-RD-Bra">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                </constraint>
+                            </constraints>
+                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="DY9-7e-Btf" firstAttribute="bottom" secondItem="fnU-ck-bmR" secondAttribute="bottom" constant="2" id="88Z-1d-JOs"/>
+                        <constraint firstItem="fnU-ck-bmR" firstAttribute="width" secondItem="M4t-SE-290" secondAttribute="width" multiplier="0.85" id="A0y-QO-hwq"/>
+                        <constraint firstItem="fnU-ck-bmR" firstAttribute="centerX" secondItem="M4t-SE-290" secondAttribute="centerX" id="E5q-gg-wqK"/>
+                        <constraint firstItem="fnU-ck-bmR" firstAttribute="centerY" secondItem="M4t-SE-290" secondAttribute="centerY" id="a7N-1L-Kqg"/>
+                        <constraint firstItem="DY9-7e-Btf" firstAttribute="centerX" secondItem="M4t-SE-290" secondAttribute="centerX" id="ztt-SN-Hhr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="wcOfferBackground"/>
+            <constraints>
+                <constraint firstItem="M4t-SE-290" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5Um-Sa-y2D"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="M4t-SE-290" secondAttribute="bottom" id="IIk-Ea-Tgi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M4t-SE-290" secondAttribute="trailing" id="hkP-KO-OAB"/>
+                <constraint firstItem="M4t-SE-290" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vLq-De-LOw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="201.44927536231884" y="-72.321428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_cross" width="20" height="20"/>
+        <namedColor name="wcCellBackground">
+            <color red="0.71372549019607845" green="0.84705882352941175" blue="1" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="wcOfferBackground">
+            <color red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="0.20000000298023224" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
